@@ -1,34 +1,61 @@
-class Circle
+class CIRCLE3
+	@@PI = 3.14
+attr_accessor :radius
 
-radius = 9
-perimeter = 5
-area = 4
-print "Enter radius : "
-radius = gets.to_i
-perimeter = 2 * 3.14 * radius
-area = 3.14 * radius * radius
-puts "The perimeter is #{perimeter}."
-puts "The area is #{area}"
-
+def initialize(radius)
+	@radius = radius
 end
 
 
-class Square
-	
-	
-	puts "Enter the length of square"
-	squarelength=gets.to_f
-	
-	area=squarelength*squarelength
-	
-	puts "The area is #{area}"
-	puts "Enter the length: "
-
-	LENGTH=gets.chomp()
-
-
-	PERIMETER=LENGTH.to_f*4
-
-	puts("The perimeter is :",+PERIMETER)
+def circumference
+	2*@@PI*@radius
 end
+
+def area
+	@@PI *@radius **2
+end
+end
+
+circle = CIRCLE3.new(9)
+puts circle.circumference
+puts circle.area
+[circle].each do |circle|
+	puts circle.circumference
+	puts circle.area
+end
+
+
+
+
+
+
+## SQUARE3##
+
+	class SQUARE3	
+	@@PI =  3.14
+	attr_accessor :length
+	
+
+	def initialize (length)
+		@length=length
+	end
+
+	 def circumference
+	 	4 * length
+	 end
+
+	 def area
+	 	length*length
+	 end
+	end
+
+	square = SQUARE3.new(9)
+	puts square.circumference
+	puts square.area
+	square.each do |square|
+		puts square.circumference
+	    puts square.area
+		
+	end
+
 
